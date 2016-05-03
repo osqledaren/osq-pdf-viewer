@@ -1,27 +1,46 @@
 $pdf-width: 613px/2;
 $pdf-height: 755px/2;
 
+$pdf-spread: 200px;
+
 .pdf-stack {
     position: relative;
     width: $pdf-width;
     height: $pdf-height;
 
     &:hover {
+        // .pdf:nth-child(4) {
+        //     transform-origin: bottom right;
+        //     transform: rotate(0deg);
+        // }
+        // .pdf:nth-child(3) {
+        //     transform-origin: bottom right;
+        //     transform: rotate(15deg);
+        // }
+        // .pdf:nth-child(2) {
+        //     transform-origin: bottom right;
+        //     transform: rotate(30deg);
+        // }
+        // .pdf:nth-child(1) {
+        //     transform-origin: bottom right;
+        //     transform: rotate(45deg);
+        // }
+
         .pdf:nth-child(4) {
-            transform-origin: bottom right;
-            transform: rotate(0deg);
+            left: 0px;
+            transform: scale(1, 1);
         }
         .pdf:nth-child(3) {
-            transform-origin: bottom right;
-            transform: rotate(15deg);
+            left: $pdf-spread * 1;
+            transform: scale(0.95, 0.95);
         }
         .pdf:nth-child(2) {
-            transform-origin: bottom right;
-            transform: rotate(30deg);
+            left: $pdf-spread * 2;
+            transform: scale(0.9, 0.9);
         }
         .pdf:nth-child(1) {
-            transform-origin: bottom right;
-            transform: rotate(45deg);
+            left: $pdf-spread * 3;
+            transform: scale(0.85, 0.85);
         }
     }
 }
@@ -32,6 +51,8 @@ $pdf-height: 755px/2;
     position: absolute;
     transition: all 0.5s ease;
     z-index: -1;
+
+    border-radius: 10px;
 
     &:nth-child(1) {
         transform: rotate(random(20) - 10 + deg);
