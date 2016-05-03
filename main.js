@@ -1,4 +1,4 @@
-pdfGrid = document.getElementById('pdf-stack');
+pdfGrid = document.getElementsByClassName('pdf-stack');
 
 var meta = [
     {
@@ -28,5 +28,5 @@ var meta = [
 ];
 
 for (var i in meta) {
-    pdfGrid.innerHTML = pdfGrid.innerHTML + '<img src=' + meta[i].frontpage + ' class="pdf"/>';
+    pdfGrid[0].innerHTML = pdfGrid[0].innerHTML + '<img src=' + meta[i].frontpage + ' class="pdf"/>';
 }
