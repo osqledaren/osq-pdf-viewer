@@ -1,6 +1,11 @@
-$pdf-width: 400px;
+$pdf-width: 200px;
 
+
+.pdf-stack {
+    position: relative;
+}
 
 .pdf {
     width: $pdf-width;
+    transform: rotate(random(20) - 10 + deg);
 }
